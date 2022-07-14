@@ -1,0 +1,146 @@
+{
+  "type": "sparkStepSegment",
+  "name": "UDD-status-350",
+  "uuid": null,
+  "pin": null,
+  "beans": {
+    "uddStatusGeneratorStep_10042": {
+      "type": "uddStatusBean",
+      "stepClassName": null,
+      "submit": false,
+      "dependencies": null,
+      "stepName": "uddStatusGeneratorStep_10042",
+      "statDate": "2022-03-30",
+      "useOneId": true,
+      "uddModel": {
+        "id": 68,
+        "datasetId": 351,
+        "name": "4a_single_oneid_Test",
+        "relDataSet": {
+          "data": [
+            {
+              "databaseName": "ae_test",
+              "dataTable": "one_id_4a_8_9",
+              "relationField": "OneId",
+              "dateField": "dt",
+              "useOneId": false
+            }
+          ]
+        },
+        "featureMapping": {
+          "userFlag": "OneId",
+          "userFlagType": "OneId",
+          "data": [
+            {
+              "fieldName": "user_8",
+              "fieldComment": "用户",
+              "fieldType": "text",
+              "sourceInfo": null,
+              "featureExp": ""
+            },
+            {
+              "fieldName": "dt",
+              "fieldComment": "时间",
+              "fieldType": "date",
+              "sourceInfo": null,
+              "featureExp": ""
+            },
+            {
+              "fieldName": "one_id_4a_8_9_click_30",
+              "fieldComment": "30天点击",
+              "fieldType": "number",
+              "sourceInfo": {
+                "databaseCode": -1,
+                "databaseName": "ae_test",
+                "tableName": "one_id_4a_8_9",
+                "field": "click",
+                "period": 30,
+                "aggType": "sum",
+                "cardId": "1647490236204"
+              },
+              "featureExp": "sum(click)"
+            }
+          ]
+        },
+        "rule": {
+          "a1": [
+            {
+              "relation": "and",
+              "rule": [
+                {
+                  "fieldName": "one_id_4a_8_9_click_30",
+                  "fieldComment": "30天点击",
+                  "operation": "gte",
+                  "value": [
+                    11
+                  ],
+                  "ruleExp": "(one_id_4a_8_9_click_30>=11)"
+                }
+              ],
+              "ruleModelExp": "(one_id_4a_8_9_click_30>=11)"
+            }
+          ],
+          "a2": [
+            {
+              "relation": "and",
+              "rule": [
+                {
+                  "fieldName": "one_id_4a_8_9_click_30",
+                  "fieldComment": "30天点击",
+                  "operation": "gte",
+                  "value": [
+                    20
+                  ],
+                  "ruleExp": "(one_id_4a_8_9_click_30>=20)"
+                }
+              ],
+              "ruleModelExp": "(one_id_4a_8_9_click_30>=20)"
+            }
+          ],
+          "a3": [
+            {
+              "relation": "and",
+              "rule": [
+                {
+                  "fieldName": "one_id_4a_8_9_click_30",
+                  "fieldComment": "30天点击",
+                  "operation": "gte",
+                  "value": [
+                    40
+                  ],
+                  "ruleExp": "(one_id_4a_8_9_click_30>=40)"
+                }
+              ],
+              "ruleModelExp": "(one_id_4a_8_9_click_30>=40)"
+            }
+          ],
+          "a4": [
+            {
+              "relation": "and",
+              "rule": [
+                {
+                  "fieldName": "one_id_4a_8_9_click_30",
+                  "fieldComment": "30天点击",
+                  "operation": "gte",
+                  "value": [
+                    90
+                  ],
+                  "ruleExp": "(one_id_4a_8_9_click_30>=90)"
+                }
+              ],
+              "ruleModelExp": "(one_id_4a_8_9_click_30>=90)"
+            }
+          ]
+        },
+        "createTime": null
+      },
+      "endPoint": "storage.jd.local",
+      "bucket": "pre-cdp",
+      "accessKey": "AXvkKuvxyDE4d0B9",
+      "secretKey": "Andy8KIhfvwzuK8OwHkrSc4xmcPF4N1IVh4uGMul",
+      "ossFilePath": "10042/dataset/udd/351"
+    }
+  },
+  "extraConfig": null,
+  "extraDeal": null
+}

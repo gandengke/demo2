@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.jd.easy.audience:task-common:1.0.4.8-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jd/easy/audience/task-common/1.0.4.8-SNAPSHOT/task-common-1.0.4.8-20220711.072850-10.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jd/easy/audience/task-common/1.0.4.8-SNAPSHOT/task-common-1.0.4.8-20220711.072850-10-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/jd/easy/audience/task-common/1.0.4.8-SNAPSHOT/task-common-1.0.4.8-20220711.072850-10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

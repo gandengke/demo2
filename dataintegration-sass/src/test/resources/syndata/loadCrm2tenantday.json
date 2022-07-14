@@ -1,0 +1,31 @@
+{
+  "type": "sparkStepSegment",
+  "name": "SplitData",
+  "uuid": null,
+  "pin": null,
+  "beans": {
+    "SynDataForAdClick": {
+      "type": "SynData2TenantBean",
+      "stepClassName": "com.jd.easy.audience.task.dataintegration.step.SynData2TenantStep",
+      "submit": false,
+      "dependencies": null,
+      "stepName": "loadCrm4aData4TenantBean",
+      "dbName": "fervuyqqtf",
+      "accountId": 11944,
+      "accountName": "欧舒丹京准通-1",
+      "sourceTableName": "adm_cdpsplitdata_crm_4a",
+      "sourceDbName": "ae_public",
+      "subTableName": "adm_app_cdp_crm_4a_tb",
+      "dtFieldSource": "dt",
+      "dataType": "PARTITIONED_INCRESCALE_PARTUPDATE",
+      "filterExpress": " dt=\"2022-05-31\" AND account_id=11944",
+      "dataSource": "ACCOUNTID",
+      "fieldFilter": "user_id,day_no_shop,latest_order_date,dt",
+      "splitFieldEx": "",
+      "sourceTypeEx": "OFFLINETASK",
+      "tableComment": "crm4a明细表",
+      "update2Mysql": true
+    }
+  },
+  "extraConfig": null
+}

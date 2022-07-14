@@ -1,0 +1,32 @@
+{
+  "type": "sparkStepSegment",
+  "name": "SplitData",
+  "uuid": null,
+  "pin": null,
+  "beans": {
+    "SplitDataForCAStep_clicklog_11759_10008327_122352":
+    {
+      "type": "SynData2TenantBean",
+      "stepClassName": "com.jd.easy.audience.task.dataintegration.step.SynData2TenantStep",
+      "submit": false,
+      "dependencies": null,
+      "stepName": "SplitDataForCAStep_clicklog_11759_10008327_122352",
+      "dbName": "vdzmprurhw",
+      "accountId": 11759,
+      "accountName": "百草味京东自营",
+      "sourceTableName": "clicklog",
+      "sourceDbName": "ad",
+      "subTableName": "adm_clicklog_11759_10008327_122352",
+      "dtFieldSource": "event_date",
+      "dataType": "NONEPARTITIONED_FULLSCALE_ALLUPDATE_PARTITIONED",
+      "filterExpress": "user_id= \"10008327\" AND account_id=\"11759\" AND source_id=\"122352\"",
+      "dataSource": "CA",
+      "fieldFilter": null,
+      "splitFieldEx": "source_id",
+      "sourceTypeEx": "PUSH",
+      "tableComment": "test点击",
+      "update2Mysql": true
+    }
+  },
+  "extraConfig": null
+}

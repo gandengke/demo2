@@ -1,0 +1,66 @@
+{
+  "type": "sparkStepSegment",
+  "name": "Dataset-LabelDataSet-336",
+  "uuid": null,
+  "pin": null,
+  "beans": {
+    "Dataset_10042_LabelDataSet_336": {
+      "type": "labelDatasetBean",
+      "stepClassName": null,
+      "submit": false,
+      "dependencies": null,
+      "stepName": "Dataset_10042_LabelDataSet_336",
+      "userIdField": "ae_test.one_id_label_8_9.OneID",
+      "userType": "OneID",
+      "useOneId": true,
+      "dataSource": [
+        {
+          "databaseName": "ae_test",
+          "dataTable": "one_id_label_8_9",
+          "relationField": "user_9",
+          "useOneId": true,
+          "dateField": ""
+        },
+        {
+          "databaseName": "ae_test",
+          "dataTable": "one_id_label_9_10",
+          "relationField": "user_9",
+          "useOneId": false,
+          "dateField": ""
+        }
+      ],
+      "labels": [
+        {
+          "labelId": 1337,
+          "database": "ae_test",
+          "table": "one_id_label_8_9",
+          "fieldName": "sex",
+          "labelType": "enumtype",
+          "fieldDelimiter": ""
+        },
+        {
+          "labelId": 1339,
+          "database": "ae_test",
+          "table": "one_id_label_9_10",
+          "fieldName": "age",
+          "labelType": "enumtype",
+          "fieldDelimiter": ""
+        }
+      ],
+      "datasetId": 336,
+      "endpoint": "storage.jd.local",
+      "bucket": "pre-cdp",
+      "accessKey": "AXvkKuvxyDE4d0B9",
+      "secretKey": "Andy8KIhfvwzuK8OwHkrSc4xmcPF4N1IVh4uGMul",
+      "ossFilePath": "oneid/label/label/336",
+      "fileName": "dataset336.csv",
+      "esNode": "prod-3-40080-jiesi-jdos-saas-ae1.jd.com:40080,prod-1-40054-jiesi-jdos-saas-ae1.jd.com:40054,prod-2-40043-jiesi-jdos-saas-ae1.jd.com:40043",
+      "esPort": null,
+      "esIndex": "pre_app_dm_ea_label_assets/statistics",
+      "esUser": "jiesi-jdos-saas-ae1",
+      "esPassword": "D2FB25EBB66E21A8",
+      "stepClassName": "com.jd.easy.audience.task.plugin.step.dataset.labeldataset.LabelDatasetStep"
+    }
+  },
+  "extraConfig": null
+}

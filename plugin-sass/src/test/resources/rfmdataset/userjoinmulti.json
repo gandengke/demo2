@@ -1,0 +1,66 @@
+{
+  "type": "sparkStepSegment",
+  "name": "Dataset-RFM-355",
+  "uuid": null,
+  "pin": null,
+  "beans": {
+    "rfm_10042_355": {
+      "type": "rfmAlalysisBean",
+      "stepClassName": null,
+      "submit": false,
+      "dependencies": null,
+      "stepName": "rfm_10042_355",
+      "rfmAnalysisConfig": {
+        "jfsBucket": "pre-cdp",
+        "jfsEndPoint": "storage.jd.local",
+        "accessKey": "AXvkKuvxyDE4d0B9",
+        "secretKey": "Andy8KIhfvwzuK8OwHkrSc4xmcPF4N1IVh4uGMul",
+        "esNode": "prod-3-40080-jiesi-jdos-saas-ae1.jd.com:40080,prod-1-40054-jiesi-jdos-saas-ae1.jd.com:40054,prod-2-40043-jiesi-jdos-saas-ae1.jd.com:40043",
+        "esPort": null,
+        "esUser": "jiesi-jdos-saas-ae1",
+        "esPassword": "D2FB25EBB66E21A8",
+        "purchaseBehaviorInfo": "pre_ads_polaris_analysis_rfm_purchase_behavior_info/assets",
+        "purchaseDurationDistribution": "pre_ads_polaris_analysis_rfm_purchase_duration_distribution/trend",
+        "purchaseFrequencyDistribution": "pre_ads_polaris_analysis_rfm_purchase_frequency_distribution/trend",
+        "repurchaseCycleDistribution": "pre_ads_polaris_analysis_rfm_repurchase_cycle_distribution/trend",
+        "monetaryDistribution": "pre_ads_polaris_analysis_rfm_monetary_distribution/trend",
+        "purchaseAmountDistribution": "pre_ads_polaris_analysis_rfm_purchase_amount_distribution/trend",
+        "purchaseChannelDistribution": "pre_ads_polaris_analysis_rfm_purchase_channel_distribution/trend",
+        "consumerLayer": "pre_ads_polaris_analysis_rfm_consumer_layer/assets"
+      },
+      "datasetId": 355,
+      "userIdField": "ae_test.oneid_rfm_user_9_10.one_id",
+      "saleIdField": null,
+      "orderDtField": null,
+      "recentyField": "ae_test.oneid_rfm_user_8_9.latest_trade_date",
+      "frequencyField": "ae_test.oneid_rfm_user_9_10.order_qtty",
+      "useOneId": false,
+      "relDataset": {
+        "data": [
+          {
+            "useOneId": true,
+            "databaseName": "ae_test",
+            "dataTable": "oneid_rfm_user_9_10",
+            "relationField": "OneID",
+            "dateField": "dt"
+          },
+          {
+            "useOneId": true,
+            "databaseName": "ae_test",
+            "dataTable": "oneid_rfm_user_8_9",
+            "relationField": "OneID",
+            "dateField": "dt"
+          }
+        ]
+      },
+      "montaryField": "ae_test.oneid_rfm_user_9_10.trade_money_summary",
+      "dataType": "user",
+      "outputPath": "10042/dataset/rfm/355",
+      "periodDays": 365,
+      "fieldsConfig": [],
+      "endDate": "2022-03-17"
+    }
+  },
+  "extraConfig": null,
+  "extraDeal": null
+}

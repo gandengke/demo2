@@ -1,0 +1,203 @@
+{
+  "type": "sparkStepSegment",
+  "name": "UDD-status-342",
+  "uuid": null,
+  "pin": null,
+  "beans": {
+    "uddStatusGeneratorStep_10042": {
+      "type": "uddStatusBean",
+      "stepClassName": null,
+      "submit": false,
+      "dependencies": null,
+      "stepName": "uddStatusGeneratorStep_10042",
+      "statDate": "2022-03-31",
+      "useOneId": true,
+      "uddModel": {
+        "id": 67,
+        "datasetId": 342,
+        "name": "xm_oneid_test",
+        "relDataSet": {
+          "data": [
+            {
+              "databaseName": "ae_test",
+              "dataTable": "one_id_4a_8_9",
+              "relationField": "OneId",
+              "dateField": "dt",
+              "useOneId": true
+            },
+            {
+              "databaseName": "ae_test",
+              "dataTable": "one_id_4a_9_10",
+              "relationField": "OneId",
+              "dateField": "dt",
+              "useOneId": true
+            }
+          ]
+        },
+        "featureMapping": {
+          "userFlag": "OneId",
+          "userFlagType": "OneId",
+          "data": [
+            {
+              "fieldName": "user_9",
+              "fieldComment": "用户标识",
+              "fieldType": "text",
+              "sourceInfo": null,
+              "featureExp": ""
+            },
+            {
+              "fieldName": "dt",
+              "fieldComment": "时间",
+              "fieldType": "date",
+              "sourceInfo": null,
+              "featureExp": ""
+            },
+            {
+              "fieldName": "one_id_4a_8_9_click_30",
+              "fieldComment": "30天点击",
+              "fieldType": "number",
+              "sourceInfo": {
+                "databaseCode": -1,
+                "databaseName": "ae_test",
+                "tableName": "one_id_4a_8_9",
+                "field": "click",
+                "period": 30,
+                "aggType": "sum",
+                "cardId": "1647416050992"
+              },
+              "featureExp": "sum(click)"
+            },
+            {
+              "fieldName": "one_id_4a_9_10_view_30",
+              "fieldComment": "30天浏览",
+              "fieldType": "number",
+              "sourceInfo": {
+                "databaseCode": -1,
+                "databaseName": "ae_test",
+                "tableName": "one_id_4a_9_10",
+                "field": "view",
+                "period": 30,
+                "aggType": "sum",
+                "cardId": "1647416060044"
+              },
+              "featureExp": "sum(view)"
+            }
+          ]
+        },
+        "rule": {
+          "a1": [
+            {
+              "relation": "and",
+              "rule": [
+                {
+                  "fieldName": "one_id_4a_8_9_click_30",
+                  "fieldComment": "30天点击",
+                  "operation": "gte",
+                  "value": [
+                    10
+                  ],
+                  "ruleExp": "(one_id_4a_8_9_click_30>=10)"
+                },
+                {
+                  "fieldName": "one_id_4a_9_10_view_30",
+                  "fieldComment": "30天浏览",
+                  "operation": "gt",
+                  "value": [
+                    4
+                  ],
+                  "ruleExp": "(one_id_4a_9_10_view_30>4)"
+                }
+              ],
+              "ruleModelExp": "(one_id_4a_8_9_click_30>=0) and (one_id_4a_9_10_view_30>4)"
+            }
+          ],
+          "a2": [
+            {
+              "relation": "and",
+              "rule": [
+                {
+                  "fieldName": "one_id_4a_8_9_click_30",
+                  "fieldComment": "30天点击",
+                  "operation": "gte",
+                  "value": [
+                    23
+                  ],
+                  "ruleExp": "(one_id_4a_8_9_click_30>=23)"
+                },
+                {
+                  "fieldName": "one_id_4a_9_10_view_30",
+                  "fieldComment": "30天浏览",
+                  "operation": "gt",
+                  "value": [
+                    6
+                  ],
+                  "ruleExp": "(one_id_4a_9_10_view_30>6)"
+                }
+              ],
+              "ruleModelExp": "(one_id_4a_8_9_click_30>=23) and (one_id_4a_9_10_view_30>6)"
+            }
+          ],
+          "a3": [
+            {
+              "relation": "and",
+              "rule": [
+                {
+                  "fieldName": "one_id_4a_8_9_click_30",
+                  "fieldComment": "30天点击",
+                  "operation": "gte",
+                  "value": [
+                    40
+                  ],
+                  "ruleExp": "(one_id_4a_8_9_click_30>=40)"
+                },
+                {
+                  "fieldName": "one_id_4a_9_10_view_30",
+                  "fieldComment": "30天浏览",
+                  "operation": "gt",
+                  "value": [
+                    9
+                  ],
+                  "ruleExp": "(one_id_4a_9_10_view_30>9)"
+                }
+              ],
+              "ruleModelExp": "(one_id_4a_8_9_click_30>=40) and (one_id_4a_9_10_view_30>9)"
+            }
+          ],
+          "a4": [
+            {
+              "relation": "and",
+              "rule": [
+                {
+                  "fieldName": "one_id_4a_8_9_click_30",
+                  "fieldComment": "30天点击",
+                  "operation": "gte",
+                  "value": [
+                    90
+                  ],
+                  "ruleExp": "(one_id_4a_8_9_click_30>=90)"
+                },
+                {
+                  "fieldName": "one_id_4a_9_10_view_30",
+                  "fieldComment": "30天浏览",
+                  "operation": "gt",
+                  "value": [
+                    15
+                  ],
+                  "ruleExp": "(one_id_4a_9_10_view_30>15)"
+                }
+              ],
+              "ruleModelExp": "(one_id_4a_8_9_click_30>=90) and (one_id_4a_9_10_view_30>15)"
+            }
+          ]
+        },
+        "createTime": null
+      },
+      "endPoint": "storage.jd.local",
+      "bucket": "pre-cdp",
+      "accessKey": "AXvkKuvxyDE4d0B9",
+      "secretKey": "Andy8KIhfvwzuK8OwHkrSc4xmcPF4N1IVh4uGMul",
+      "ossFilePath": "10042/dataset/udd/342"
+    }
+  },
+  "extraConfig": null
+}

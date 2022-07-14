@@ -1,0 +1,47 @@
+{
+  "type": "sparkStepSegment",
+  "name": "Audience-Custom-1647847722914006",
+  "uuid": null,
+  "pin": null,
+  "beans": {
+    "Custom_10042_Generate": {
+      "type": "audienceGenerateBean",
+      "stepClassName": null,
+      "submit": false,
+      "dependencies": null,
+      "stepName": "Custom_10042_Generate",
+      "sparkSQL": "intersection(_4aLayout(\"dataSetCode=361&status=aware,appeal,advocate&startDate=2022-03-01&endDate=2022-03-20\"),_package(\"audienceId=1647851765195823\"))",
+      "audienceId": "1647847722914006",
+      "audienceSize": null,
+      "limitSize": 1,
+      "dbName": "ae_test",
+      "useOneId": true,
+      "userIdType": 9,
+      "dataSource": [
+        {
+          "type": "AudienceDataSourceBean",
+          "sourceId": "361",
+          "bucketName": "pre-cdp",
+          "endPoint": "storage.jd.local",
+          "secretKey": "Andy8KIhfvwzuK8OwHkrSc4xmcPF4N1IVh4uGMul",
+          "accessKey": "AXvkKuvxyDE4d0B9",
+          "packageUrl": "4astatusmockdata_361",
+          "sourceType": "layout4a",
+          "userIdType": 8
+        },
+        {
+          "type": "AudienceDataSourceBean",
+          "sourceId": "1647851765195823",
+          "bucketName": "pre-cdp",
+          "endPoint": "storage.jd.local",
+          "secretKey": "Andy8KIhfvwzuK8OwHkrSc4xmcPF4N1IVh4uGMul",
+          "accessKey": "AXvkKuvxyDE4d0B9",
+          "packageUrl": "audiencepackage_1647851765195823",
+          "sourceType": "audiencepackage",
+          "userIdType": -99
+        }
+      ]
+    }
+  },
+  "extraConfig": null
+}
